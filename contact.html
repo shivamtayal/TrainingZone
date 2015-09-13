@@ -20,12 +20,13 @@
 <!-- InstanceEndEditable -->
 </head>
 <body>
+<script src="Script/ScriptMain.js"></script>
 <nav class="navbar navbar-default">
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="#">Training Zone</a> </div>
+    <img src="img/logo.png" alt="" width="93" height="78"/>    </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -67,6 +68,43 @@
           <p class="col-xs-5">Email :</p>
           <p class="col-xs-5">training@trainingzone.com.au</p>
         <!-- InstanceEndEditable --></div>
+		<form action="" method="post" name="form1" id="form1">
+      <table width="750" border="1">
+  <tr>
+    <th width="115" scope="row">First Name</th>
+    <td width="619"><img src="Images/cross.png" name="FNAME" id="FNAME" width="12" height="12" alt="X" />      <input name="textfield" type="text" id="textfield" size="50" maxlength="50" onChange="this.style.borderRadius='1em'" onBlur="changeStyle('textfield')" onKeyUp="checkFNAME(this)"/></td>
+  </tr>
+  <tr>
+    <th scope="row">Last Name</th>
+    <td><img src="Images/cross.png" name="LNAME" id="LNAME" width="12" height="12" alt="X" />      <input name="LName" type="text" id="LName" size="50" maxlength="50" onChange="this.style.borderRadius='1em'" onBlur="changeStyle('LName')" onKeyUp="checkLNAME(this)"/></td>
+  </tr>
+  <tr>
+    <th scope="row">Address</th>
+    <td><label for="Address"></label>
+    <img src="Images/cross.png" name="ADD" id="ADD" width="12" height="12" alt="X" />      
+      <textarea name="Address" cols="75" rows="5" id="Address" onChange="this.style.borderRadius='1em'" onBlur="changeStyle('Address')" onKeyUp="checkADD(this)"></textarea></td>
+  </tr>
+  <tr>
+    <th scope="row">Gender</th>
+    <td><p>
+      <input type="radio" name="radio" id="Male" value="Male"/>
+      <label for="Male">Male</label>
+      <input type="radio" name="radio" id="Female" value="Female" />
+      <label for="Female">Female</label>
+    </p>
+     </td>
+  </tr>
+  <tr>
+    <th scope="row">Comments  </th>
+    <td><label for="Comment"></label>
+      <textarea name="comments" cols="50" rows="4" id="comments" onChange="this.style.borderRadius='1em'" onBlur="changeStyle('comments')" onKeyUp="updateCharacters(100)"></textarea> <span class="spann" id="characters">(100 characters remaining)</span></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="Submit" id="Submit" value="Submit" />
+      <input type="reset" name="Reset" id="Reset" value="Reset" /></th>
+    </tr>
+</table>
+</form>
       </div>
     </div>
   </div>
